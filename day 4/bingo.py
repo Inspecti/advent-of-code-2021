@@ -27,7 +27,7 @@ def check_board_for_win(board, draws):
         vertvals = []
         for line in board:
             vertvals.append(line[i])
-        if all(val in draws for val in line):
+        if all(val in draws for val in vertvals):
             return True, "vertical", vertvals
     return False, "no bingo", []
 
